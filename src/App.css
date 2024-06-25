@@ -1,0 +1,126 @@
+*{
+    padding: 0px;
+    margin:0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.app{
+    display: flex;
+}
+body{
+    background-color: rgb(32, 32, 32);
+    color: white;
+}
+.left-side{
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 200px;
+    height: 98vh;
+    padding: 10px;
+}
+.chats p{
+    padding: 5px 10px;
+    margin: 5px;
+    background-color:rgb(32, 32, 32);
+    border-radius: 50px;
+}
+
+.chats p:hover{
+    background-color: rgb(70, 89, 197);
+}
+
+.bottom-buttons{
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.userinput-wrapper{
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    top: 90vh;
+    left: 2vw;
+    
+    
+}
+
+.userInput{
+    border-radius: 50px;
+    outline:none;
+    border:none;
+    font-size: 16px;
+    height: 50px;
+    width: 70vw;
+    padding: 0px 10px;
+    
+}
+.sendBTN{
+    border: 0px;
+    padding: 0px 12px;
+    border-radius: 50px;
+    margin:0 10px;
+    background-color: rgb(70, 89, 197);
+    color: white;
+}
+
+.text{
+    padding: 20px;
+    height: auto;
+    width: fit-content;
+    background-color: rgb(70, 89, 197);
+    margin: 10px;
+    max-width: 250px;
+    
+}
+.text-header{
+   color: rgb(255, 255, 255); 
+}
+
+.text-right{
+    border-radius:50px 50px 0px 50px;
+    align-self: flex-end;
+}
+.other{
+    background-color: rgb(63, 62, 62);
+    border-radius:50px 50px 50px 0px;
+    align-self: baseline;
+}
+
+.text-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: last baseline;
+    width: 100vw;
+    height: 70vh;
+    background-color: rgb(43, 43, 43);
+    border-radius: 20px;
+    border: 2px solid rgb(22, 22, 22);
+    margin: 20px auto;
+    padding: 10px;
+    overflow-y: scroll;
+    
+}
+.login-page{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50vh;
+    
+    
+    text-align: center;
+}
+.login-page h2{
+    text-align: left ;
+}
+.login-page input{
+    border: 0px;
+    padding: 10px;
+    margin-top: 10px;
+    outline: none;
+    border-radius: 5px;
+}
+.login-page .submitBTN{
+    color: white;
+    background-color: rgb(126, 64, 207);
+}
