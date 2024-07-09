@@ -14,7 +14,7 @@ export const Texts_holder=({listoftexts})=>{
             
             {
             listoftexts.map(element =>{
-  
+                if(element.text === undefined)return <p id="last" style={{textAlign: 'center'}}>{element}</p> ;
                 return <Text text={element.text} text_username={element.text_username} />;
             })
             }

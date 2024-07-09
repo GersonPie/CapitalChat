@@ -10,6 +10,10 @@ body{
     background-color: rgb(32, 32, 32);
     color: white;
 }
+.whole-wrapper{
+    display: flex;
+    flex-direction: column;
+}
 .left-side{
     background-color: rgb(17, 17, 17);
     display: flex;
@@ -36,12 +40,10 @@ body{
 }
 
 .userinput-wrapper{
-    justify-content: center;
     display: flex;
-    position: fixed;
-    top: 90vh;
-    left: 2vw;
-    
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
     
 }
 
@@ -51,7 +53,7 @@ body{
     border:none;
     font-size: 16px;
     height: 50px;
-    width: 70vw;
+    width: 65%;
     padding: 0px 10px;
     
 }
@@ -62,6 +64,8 @@ body{
     margin:0 10px;
     background-color: rgb(70, 89, 197);
     color: white;
+    outline: none;
+    height: 50px;
 }
 
 .text{
@@ -92,7 +96,7 @@ body{
     flex-direction: column;
     align-items: last baseline;
     width: 100vw;
-    height: 70vh;
+    height:calc(100vh - 160px);
     background-color: rgb(43, 43, 43);
     border-radius: 20px;
     border: 2px solid rgb(22, 22, 22);
@@ -123,4 +127,36 @@ body{
 .login-page .submitBTN{
     color: white;
     background-color: rgb(126, 64, 207);
+}
+
+.errormessage{
+    display: none;
+    color: red;
+    background-color: rgb(43, 43, 43);;
+    position: absolute;
+    top: 80vh;
+    padding: 20px;
+    border-radius: 20px;
+    font-weight: 400;
+    
+}
+.animate-error{
+    display: block;
+    animation: errorSlideLeft 5s ease-in-out;
+}
+.reload{
+    
+    max-width: 100%;
+    
+
+}
+@keyframes errorSlideLeft {
+    0%{left: -50vw;}
+    10%{left: 20px;}
+    90%{left: 20px;}
+    100%{left: -50vw;}
+}
+@keyframes rotate {
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
 }

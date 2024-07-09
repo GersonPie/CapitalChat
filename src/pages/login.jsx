@@ -8,7 +8,7 @@ export const Login = ()=>{
     
     const handleInput=(e)=>{
         setUsername(e.target.value)
-        if(username.length>=2 && username.length<16){
+        if(e.target.value.length>=3 && e.target.value.length<16){
 
             setError(`nick name ${e.target.value} disponivel👍✌`)
     
@@ -18,7 +18,7 @@ export const Login = ()=>{
     }
 
     const handleClick=()=>{
-        if(username.length>=2 && username.length<16){
+        if(username.length>=3 && username.length<16){
 
             setIsLogged(true);
         }else{
@@ -28,10 +28,11 @@ export const Login = ()=>{
     return(
         <form className="login-page" onSubmit={(e)=>e.preventDefault()}>
             <h2>Nick Name</h2>
-            <input type="text" name='usename' className='username' id='username' onChange={(e)=>handleInput(e)} onInput={(e)=>handleInput(e)} value={username} autoFocus/>
+            <input type="text" name='usename' className='username' id='username' onKeyDown={(e)=>handleInput(e)} onInput={(e)=>handleInput(e)} value={username} autoFocus/>
             
             <input type="submit" value='Entrar' className='submitBTN' onClick={handleClick} />
             {errormessage}
+            
         </form>
     )
 }
