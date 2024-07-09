@@ -5,7 +5,7 @@ const cors = require('cors')
 const fs = require("node:fs")
 const { stringify } = require('node:querystring')
 
-app.use(cors({origin: 'https://capital-chat.vercel.app/', optionsSuccessStatus: 200}))
+app.use(cors({origin: 'https://capital-chat.vercel.app/#last', optionsSuccessStatus: 200}))
 app.use(bodyparser.json())
 app.listen(3000, ()=>{
     console.log("server started in port 3000")
