@@ -10,7 +10,7 @@ app.use(bodyparser.json())
 app.listen(3000, ()=>{
     console.log("server started in port 3000")
 })
-app.get("/", (req, res)=>{res.send('hello')})
+
 app.post("/rooms:1", (req, res)=>{
     saveData(req.body)
    // console.log(`the saved data is\n ${JSON.stringify(loadFile())}`)
@@ -20,7 +20,7 @@ app.get("/rooms:1", (req, res)=>{
 
     
         fs.readFile('./data.md', 'utf8',(err, data)=>{
-            if(err)saveData()
+            if(err)saveData(data)
             else {
                 let newdata = data;
                 console.log(typeof newdata)
