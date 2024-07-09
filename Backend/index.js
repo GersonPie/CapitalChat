@@ -5,12 +5,12 @@ const cors = require('cors')
 const fs = require("node:fs")
 const { stringify } = require('node:querystring')
 
-app.use(cors({origin: 'https://capital-chat.vercel.app/#last', optionsSuccessStatus: 200}))
+app.use(cors())
 app.use(bodyparser.json())
 app.listen(3000, ()=>{
     console.log("server started in port 3000")
 })
-
+app.post("/", (req, res)=>{res.send('hello')})
 app.post("/rooms:1", (req, res)=>{
     saveData(req.body)
    // console.log(`the saved data is\n ${JSON.stringify(loadFile())}`)
