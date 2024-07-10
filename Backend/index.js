@@ -11,14 +11,15 @@ app.listen(3000, ()=>{
     console.log("server started in port 3000")
 })
 
-app.post("/rooms:1", (req, res)=>{
+app.post("/rooms1", (req, res)=>{
+    res.send("post request made")
     saveData(req.body)
    // console.log(`the saved data is\n ${JSON.stringify(loadFile())}`)
     res.end()
 })
-app.get("/rooms:1", (req, res)=>{
+app.get("/rooms1", (req, res)=>{
 
-    
+    res.send("get request made")
         fs.readFile('./data.md', 'utf8',(err, data)=>{
             if(err)saveData(data)
             else {
