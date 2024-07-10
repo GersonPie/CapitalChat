@@ -10,7 +10,7 @@ app.use(bodyparser.json())
 app.listen(3000, ()=>{
     console.log("server started in port 3000")
 })
-
+app.get("/", (req, res)=>{res.sebd("hello man") } ) 
 app.post("/rooms1", (req, res)=>{
     res.send("post request made")
     saveData(req.body)
