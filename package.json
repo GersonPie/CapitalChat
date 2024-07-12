@@ -2,6 +2,8 @@
   "name": "client",
   "homepage": "https://gersonpie.github.io/CapitalChat/",
   "private": true,
+  "proxy": "https://capital-chat-server.vercel.app/",
+  
   "version": "0.0.0",
   "type": "module",
   "scripts": {
