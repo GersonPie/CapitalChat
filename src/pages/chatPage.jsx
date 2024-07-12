@@ -47,7 +47,7 @@ export const ChatPage = ()=>{
 
     const fetchdata = async () => {
         try {
-            const response = await fetch(IP, { method: 'get' });
+            const response = await fetch(IP, { method: 'GET' });
     
             if (!response.ok) {
                 throw new Error(`Error: ${response.status}`);
