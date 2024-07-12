@@ -3,16 +3,9 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/index.js"
+        "dest": "index.js"
       }
     ],
-    "functions": {
-      "api": {
-        "handler": "index.handler",
-        "runtime": "nodejs14.x",
-        "memory": 1024
-      }
-    },
     "rewrites": [
       {
         "source": "/(.*)",
