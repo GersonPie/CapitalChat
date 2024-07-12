@@ -21,6 +21,8 @@ export const Buttons = ({addtext, setError, FetchTimes})=>{
             method: "POST"
         }).catch(err =>{
             setError(<ErrorMessage error="Sem conexão com servidor, verifique a Internet"/>)
+        }).then(res =>{
+            console.log(res);
         })
         if(response.ok)setTimeout(() => {setInText('')}, 50);
 
