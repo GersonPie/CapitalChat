@@ -5,21 +5,26 @@ const cors = require('cors')
 const fs = require("node:fs")
 const { stringify } = require('node:querystring')
 
-app.use(cors())
+app.use(cors({origin: "*"}))
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    next();
+})
+
+
 app.use(bodyparser.json())
 app.listen(3000, ()=>{
     console.log("server started in port 3000")
-})
-app.get("/", (req, res)=>{res.sebd("hello man") } ) 
+}) 
 app.post("/rooms1", (req, res)=>{
-    res.send("post request made")
     saveData(req.body)
    // console.log(`the saved data is\n ${JSON.stringify(loadFile())}`)
     res.end()
 })
 app.get("/rooms1", (req, res)=>{
 
-    res.send("get request made")
         fs.readFile('./data.md', 'utf8',(err, data)=>{
             if(err)saveData(data)
             else {
