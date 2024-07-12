@@ -18,19 +18,13 @@ app.use(bodyparser.json())
 app.listen(3000, ()=>{
     console.log("server started in port 3000")
 }) 
-app.get("/",(req, res)=>{
-    res.send("servidor iniciado")
-    res.end()
-})
-app.get("/room",(req, res)=>{
-    res.send("servidor iniciado no room")
-})
-app.post("/rooms1", (req, res)=>{
+
+app.post("/", (req, res)=>{
     saveData(req.body)
    // console.log(`the saved data is\n ${JSON.stringify(loadFile())}`)
     res.end()
 })
-app.get("/rooms1", (req, res)=>{
+app.get("/", (req, res)=>{
 
         fs.readFile('./data.md', 'utf8',(err, data)=>{
             if(err)saveData(data)

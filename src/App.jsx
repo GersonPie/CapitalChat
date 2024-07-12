@@ -13,7 +13,7 @@ const App = () => {
   const [loadedChats, setLoadedChats]= useState(false)
   const [listoftexts, setlistoftexts] = useState([]);
   const [userError, setError] = useState('');
-  const [IP, setIP]=useState('https://capital-chat-server.vercel.app/rooms1')
+  const [IP, setIP]=useState('https://capital-chat-server.vercel.app/')
   
   const ContextData ={
     username,
