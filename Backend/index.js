@@ -18,7 +18,9 @@ app.use(bodyparser.json())
 app.listen(3000, ()=>{
     console.log("server started in port 3000")
 }) 
-
+app.post("/", ()=>{
+    console.log("Hello world")
+})
 app.post("/api/room1", (req, res)=>{
     saveData(req.body)
    // console.log(`the saved data is\n ${JSON.stringify(loadFile())}`)
