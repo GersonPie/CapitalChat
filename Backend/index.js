@@ -15,7 +15,7 @@ app.use((req, res, next) => {
 
 
 app.use(bodyparser.json())
-app.listen(3000, ()=>{
+app.listen(8080, ()=>{
     console.log("server started in port 3000")
 }) 
 app.post("/", ()=>{
