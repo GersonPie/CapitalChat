@@ -6,5 +6,5 @@ app.get("/", (req, res)=>{
   res.send("<h1>Ola</h1>")
   res.end()
 }
-       ).listen(3000, ()=>{
+       ).listen(3000,"0.0.0.0", ()=>{
   console.log("server stared and running on port 3000")})
